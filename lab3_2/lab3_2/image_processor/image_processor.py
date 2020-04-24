@@ -1,4 +1,4 @@
-from cv2 import imread, imwrite, imshow, waitKey, destroyAllWindows
+from cv2 import imread, imwrite
 
 from image_processor.manipulations.process import Process
 
@@ -22,8 +22,3 @@ class ImageProcessor:
             imwrite(self.__image_path, image)
         else:
             imwrite(destination_path, image)
-
-        imshow('Original image', self.__image)
-        imshow('Modified image', image)
-        waitKey(0)
-        destroyAllWindows()
